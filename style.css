@@ -1,0 +1,363 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.login-form {
+  background: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.app-title {
+  font-size: 36px;
+  color: #1877f2;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+#loginForm {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 17px;
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: none;
+  border-color: #1877f2;
+  box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.2);
+}
+
+button {
+  background: #1877f2;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+button:hover {
+  background: #166fe5;
+}
+
+.links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.forgot-password, #signUpLink {
+  color: #1877f2;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.forgot-password:hover, #signUpLink:hover {
+  text-decoration: underline;
+}
+
+.separator {
+  color: #666;
+  font-size: 14px;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+  
+  .login-form {
+    padding: 20px;
+  }
+  
+  .app-title {
+    font-size: 28px;
+  }
+  
+  input, button {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+/* ============ DASHBOARD STYLES ============ */
+
+.dashboard-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.dashboard-header {
+  background: white;
+  padding: 20px 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.dashboard-header h1 {
+  color: #1877f2;
+  font-size: 28px;
+  margin: 0;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-info span {
+  color: #333;
+  font-size: 14px;
+}
+
+.logout-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #c82333;
+}
+
+.dashboard-main {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.attendance-card {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  margin-bottom: 30px;
+}
+
+.attendance-card h2 {
+  color: #333;
+  margin-top: 0;
+  text-align: center;
+  font-size: 24px;
+}
+
+.status-info {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  background: #f0f0f0;
+  color: #666;
+}
+
+.status-badge.checked-in {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-badge.checked-out {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.time-info {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.time-display {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.btn {
+  padding: 14px 40px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: #1877f2;
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #166fe5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(24, 119, 242, 0.4);
+}
+
+.btn-primary:disabled {
+  background: #d0d0d0;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.btn-danger {
+  background: #dc3545;
+  color: white;
+}
+
+.btn-danger:hover:not(:disabled) {
+  background: #c82333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.4);
+}
+
+.btn-danger:disabled {
+  background: #d0d0d0;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.attendance-history {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.attendance-history h3 {
+  color: #333;
+  margin-top: 0;
+  font-size: 20px;
+  border-bottom: 2px solid #1877f2;
+  padding-bottom: 15px;
+}
+
+.log-entries {
+  margin-top: 20px;
+}
+
+.log-entry {
+  background: #f9f9f9;
+  padding: 15px;
+  margin: 10px 0;
+  border-left: 4px solid #1877f2;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.log-entry.check-in {
+  border-left-color: #28a745;
+}
+
+.log-entry.check-out {
+  border-left-color: #ffc107;
+}
+
+.log-entry-type {
+  font-weight: bold;
+  color: #333;
+}
+
+.log-entry-time {
+  color: #666;
+  font-size: 14px;
+}
+
+.no-data {
+  color: #999;
+  text-align: center;
+  padding: 20px;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .dashboard-header {
+    padding: 15px 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .dashboard-header h1 {
+    font-size: 22px;
+  }
+
+  .dashboard-main {
+    margin: 20px 0;
+    padding: 10px;
+  }
+
+  .attendance-card {
+    padding: 20px;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .user-info {
+    flex-direction: column;
+    width: 100%;
+  }
+}

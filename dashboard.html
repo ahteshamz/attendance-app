@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <header class="dashboard-header">
+      <h1>Attendance Dashboard</h1>
+      <div class="user-info">
+        <span id="userEmail"></span>
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+      </div>
+    </header>
+
+    <main class="dashboard-main">
+      <div class="attendance-card">
+        <h2>Mark Your Attendance</h2>
+        
+        <div class="status-info">
+          <div id="statusDisplay" class="status-badge">
+            <span id="statusText">Not Checked In</span>
+          </div>
+        </div>
+
+        <div class="time-info">
+          <div id="checkInTime" class="time-display" style="display:none;">
+            <p><strong>Check In Time:</strong> <span id="checkInTimeValue"></span></p>
+          </div>
+          <div id="checkOutTime" class="time-display" style="display:none;">
+            <p><strong>Check Out Time:</strong> <span id="checkOutTimeValue"></span></p>
+          </div>
+        </div>
+
+        <div class="button-group">
+          <button id="checkInBtn" class="btn btn-primary">Check In</button>
+          <button id="checkOutBtn" class="btn btn-danger" disabled>Check Out</button>
+        </div>
+      </div>
+
+      <div class="attendance-history">
+        <h3>Today's Attendance</h3>
+        <div id="attendanceLog" class="log-entries">
+          <p class="no-data">No records yet</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
