@@ -8,7 +8,7 @@ import {
   getFirestore 
 } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-firestore.js";
 
-// 🔥 Firebase Configuration
+//  Firebase Configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "",
@@ -21,12 +21,12 @@ const firebaseConfig = {
   measurementId: " "
 };
 
-// 🔥 Initialize Firebase
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-// 🔥 Firebase Services
+// Firebase Services
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-// ✅ Export Services
+//  Export Services
 export { auth, db };
